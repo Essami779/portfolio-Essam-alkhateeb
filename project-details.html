@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>تفاصيل المشروع  </title>
+    <!-- ==== CSS Files ==== -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/skins/color-1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/style-switcher.css">
+    <link rel="stylesheet" href="css/project-details.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- ==== Main Container Start ==== -->
+    <div class="main-container">
+      <!-- ==== ASide Start ==== -->
+      <div class="aside">
+        <div class="logo">
+          <a href="index.html"><span>P</span>ortfolio</a>
+        </div>
+        <div class="nav-toggler">
+          <span></span>
+        </div>
+        <ul class="nav">
+          <li><a href="index-ar.html#home"><i class="fa fa-home"></i> الرئيسية</a></li>
+          <li><a href="index-ar.html#about"><i class="fa fa-user"></i> المعلومات الشخصية</a></li>
+          <li><a href="index-ar.html#service"><i class="fa fa-list"></i> الخدمات</a></li>
+          <li><a href="index-ar.html#portfolio" class="active"><i class="fa fa-briefcase"></i> أعمالي</a></li>
+          <li><a href="index-ar.html#contact"><i class="fa fa-comments"></i> اتصل بي</a></li>
+        </ul>
+      </div>
+      <!-- ==== ASide End ==== -->
+
+      <!-- ==== Main Content Start ==== -->
+      <div class="main-content">
+        <section class="section active">
+          <div class="container">
+            <div class="row">
+              <div class="section-title padd-15">
+                <h2 id="project-title-top">تفاصيل المشروع</h2>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="padd-15">
+                <a href="index.html#projects" class="back-link">
+                  <i class="fas fa-arrow-right"></i>
+                  الرجوع للمشاريع
+                </a>
+              </div>
+            </div>
+
+            <div class="details-container">
+              <div class="details-image-side">
+                <img id="main-display-img" src="" alt="Project Display" class="main-project-img shadow-dark">
+                <div id="gallery-thumbs" class="project-gallery-thumbs"></div>
+              </div>
+
+              <div class="details-info-side">
+                <div class="project-title-header">
+                  <h1 id="project-title">اسم المشروع</h1>
+                </div>
+
+                <div class="project-desc-box">
+                  <p id="project-description">شرح مفصل للمشروع...</p>
+                </div>
+
+                <div id="access-section" class="access-card shadow-dark">
+                  <h3>بيانات الوصول (Demo)</h3>
+                  <div class="access-item">
+                    <i class="fas fa-user-circle"></i>
+                    <span>المستخدم: <strong id="user-text">---</strong></span>
+                    <button class="copy-btn" onclick="copyText('user-text')">نسخ</button>
+                  </div>
+                  <div class="access-item">
+                    <i class="fas fa-key"></i>
+                    <span>كلمة المرور: <strong id="pass-text">---</strong></span>
+                    <button class="copy-btn" onclick="copyText('pass-text')">نسخ</button>
+                  </div>
+                </div>
+
+                <div class="project-actions-btns">
+                  <a href="#" id="official-btn" target="_blank" class="action-btn outline">الموقع الرسمي</a>
+                  <a href="#" id="demo-btn" target="_blank" class="action-btn main">لوحة التحكم</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <!-- ==== Main Content End ==== -->
+    </div>
+    <!-- ==== Main Container End ==== -->
+
+    <!-- ==== Style Switcher Start ==== -->
+    <div class="style-switcher">
+      <div class="style-switcher-toggler s-icon">
+        <i class="fas fa-cog fa-spin"></i>
+      </div>
+      <div class="day-night s-icon">
+        <i class="fas "></i>
+      </div>
+      <h4>Theme Colors</h4>
+      <div class="colors">
+        <span class="color-1" onclick="setActiveStyle('color-1')"></span>
+        <span class="color-2" onclick="setActiveStyle('color-2')"></span>
+        <span class="color-3" onclick="setActiveStyle('color-3')"></span>
+        <span class="color-4" onclick="setActiveStyle('color-4')"></span>
+        <span class="color-5" onclick="setActiveStyle('color-5')"></span>
+      </div>
+    </div>
+    <!-- ==== Style Switcher End ==== -->
+
+    <!-- Scripts -->
+    <script src="js-ar/projects-data.js"></script>
+    <script src="js-ar/project-details.js"></script>
+    <script src="js-ar/script.js"></script>
+    <script src="js-ar/style-switcher.js"></script>
+  </body>
+</html>
+
