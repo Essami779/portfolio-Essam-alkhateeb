@@ -159,10 +159,27 @@
     transform: translateY(-3px);
 }
 
+/* RTL Overrides */
+[dir="rtl"] .details-container {
+    flex-direction: row-reverse;
+}
+
+[dir="rtl"] .copy-btn {
+    margin-right: 15px;
+    margin-left: 0;
+}
+
+[dir="rtl"] .back-link i {
+    transform: rotate(0deg); /* Keeping the right arrow */
+}
+
 @media (max-width: 991px) {
     .details-image-side, .details-info-side {
         flex: 0 0 100%;
         max-width: 100%;
+    }
+    [dir="rtl"] .details-container {
+        flex-direction: column;
     }
 }
 

@@ -165,7 +165,7 @@ ul
 /* aside */
 .aside
 {
-    width: -270px;
+    width: 270px;
     background: var(--bg-black-100) ;
     position: fixed;
     right: 0;

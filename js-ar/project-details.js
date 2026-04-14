@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <div style="text-align:center; width: 100%; padding: 50px;">
                 <h2>المشروع غير موجود</h2>
                 <p>عذراً، لم نتمكن من العثور على المشروع الذي تبحث عنه.</p>
-                <a href="index-ar.html#projects" class="back-link">الرجوع للمشاريع</a>
+                <a href="index-ar.html#portfolio" class="back-link">الرجوع للمشاريع</a>
             </div>
         `;
     }
