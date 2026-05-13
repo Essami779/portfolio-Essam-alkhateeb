@@ -77,11 +77,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Hire Me Button
-    const hireMeBtn = document.querySelector(".hire-me");
-    if (hireMeBtn) {
-        hireMeBtn.addEventListener("click", function(e) {
+    const hireMeBtns = document.querySelectorAll(".hire-me");
+    hireMeBtns.forEach(btn => {
+        btn.addEventListener("click", function (e) {
             const href = this.getAttribute("href");
-            if (href.startsWith("#")) {
+            if (href && href.startsWith("#")) {
                 const targetId = href.split("#")[1];
                 const targetSection = document.getElementById(targetId);
                 if (targetSection) {
@@ -90,7 +90,8 @@ document.addEventListener("DOMContentLoaded", () => {
                         const a = li.querySelector("a");
                         if (a) {
                             a.classList.remove("active");
-                            if (a.getAttribute("href") === href) {
+                            const linkHref = a.getAttribute("href");
+                            if (linkHref === href || (linkHref.includes("#") && linkHref.split("#")[1] === targetId)) {
                                 a.classList.add("active");
                             }
                         }
@@ -102,7 +103,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             }
         });
-    }
+    });
 });
 
 // EmailJS Function (Global for onclick)
