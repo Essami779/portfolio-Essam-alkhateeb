@@ -47,18 +47,18 @@ styleSwitcherToggle.addEventListener("click", () =>
 
     /* ======================================== theme Light and dark mode ================================================== */
   const aren = document.querySelector(".ar-en");
-  ar-en.addEventListener("click", () =>{
-    ar-en.querySelector("i").classList.toggle("fa-e");
-    ar-en.querySelector("i").classList.toggle("fa-a");
+  aren.addEventListener("click", () =>{
+    aren.querySelector("i").classList.toggle("fa-e");
+    aren.querySelector("i").classList.toggle("fa-a");
     document.body.classList.toggle("switch");
   })
   window.addEventListener("load", () => {
     if(document.body.classList.contains("switch"))
     {
-        ar-en.querySelector("i").classList.add("fa-e");
+        aren.querySelector("i").classList.add("fa-e");
     }
     else
     {
-        ar-en.querySelector("i").classList.add("fa-a");
+        aren.querySelector("i").classList.add("fa-a");
     }
   })

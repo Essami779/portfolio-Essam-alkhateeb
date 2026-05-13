@@ -1,5 +1,5 @@
 /**
- * Portfolio Main Script
+ * Portfolio Main Script (Arabic Version)
  * Refactored for robustness and cross-page compatibility
  */
 
@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const typingElement = document.querySelector(".typing");
     if (typingElement && typeof Typed !== 'undefined') {
         new Typed(".typing", {
-            strings: typingElement.classList.contains("ar") ? ["مصمم مواقع", "مطور مواقع", "عمل حر"] : ["Web Designer", "Web Developer", "Freelancer"],
+            strings: ["مصمم مواقع", "مطور مواقع", "عمل حر"],
             typeSpeed: 100,
             backSpeed: 60,
             loop: true
