@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const typingElement = document.querySelector(".typing");
     if (typingElement && typeof Typed !== 'undefined') {
         new Typed(".typing", {
-            strings: ["مصمم مواقع", "مصمم تطبيقات", "مطور مواقع", "عمل حر"],
+            strings: ["مصمم مواقع", "مصمم تطبيقات", "مطور فلاتر", "مطور مواقع", "عمل حر"],
             typeSpeed: 100,
             backSpeed: 60,
             loop: true

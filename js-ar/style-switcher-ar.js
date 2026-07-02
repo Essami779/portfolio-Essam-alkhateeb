@@ -41,16 +41,27 @@ window.addEventListener("load", () => {
 
 /* ======================================== theme Light and dark mode ================================================== */
 const arEn = document.querySelector(".ar-en");
-arEn.addEventListener("click", () => {
-    arEn.querySelector("i").classList.toggle("fa-e");
-    arEn.querySelector("i").classList.toggle("fa-a");
-    document.body.classList.toggle("switch");
-});
+if (arEn) {
+    const arEnIcon = arEn.querySelector("i");
+    if (arEnIcon) {
+        arEn.addEventListener("click", () => {
+            arEnIcon.classList.toggle("fa-e");
+            arEnIcon.classList.toggle("fa-a");
+            document.body.classList.toggle("switch");
+        });
+    }
+}
 
 window.addEventListener("load", () => {
-    if (document.body.classList.contains("switch")) {
-        arEn.querySelector("i").classList.add("fa-e");
-    } else {
-        arEn.querySelector("i").classList.add("fa-a");
+    const arEn = document.querySelector(".ar-en");
+    if (arEn) {
+        const arEnIcon = arEn.querySelector("i");
+        if (arEnIcon) {
+            if (document.body.classList.contains("switch")) {
+                arEnIcon.classList.add("fa-e");
+            } else {
+                arEnIcon.classList.add("fa-a");
+            }
+        }
     }
 });

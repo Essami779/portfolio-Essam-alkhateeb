@@ -47,18 +47,26 @@ styleSwitcherToggle.addEventListener("click", () =>
 
     /* ======================================== theme Light and dark mode ================================================== */
   const aren = document.querySelector(".ar-en");
-  aren.addEventListener("click", () =>{
-    aren.querySelector("i").classList.toggle("fa-e");
-    aren.querySelector("i").classList.toggle("fa-a");
-    document.body.classList.toggle("switch");
-  })
+  if (aren) {
+      const arenIcon = aren.querySelector("i");
+      if (arenIcon) {
+          aren.addEventListener("click", () => {
+              arenIcon.classList.toggle("fa-e");
+              arenIcon.classList.toggle("fa-a");
+              document.body.classList.toggle("switch");
+          });
+      }
+  }
   window.addEventListener("load", () => {
-    if(document.body.classList.contains("switch"))
-    {
-        aren.querySelector("i").classList.add("fa-e");
-    }
-    else
-    {
-        aren.querySelector("i").classList.add("fa-a");
-    }
-  })
+      const aren = document.querySelector(".ar-en");
+      if (aren) {
+          const arenIcon = aren.querySelector("i");
+          if (arenIcon) {
+              if (document.body.classList.contains("switch")) {
+                  arenIcon.classList.add("fa-e");
+              } else {
+                  arenIcon.classList.add("fa-a");
+              }
+          }
+      }
+  });
