@@ -942,7 +942,6 @@ h3.my-profrssiion
     .about .about-content .skills,
     .about .about-content .personal-info
     {
-        text-align: left;
         flex: 0 0 100%;
         max-width: 100%;
     }
