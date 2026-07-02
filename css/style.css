@@ -167,18 +167,21 @@ ul
 .aside
 {
     width: 270px;
-    background: var(--bg-black-100) ;
+    background: linear-gradient(180deg, rgba(48, 16, 74, 0.6) 0%, rgba(21, 21, 21, 0.85) 100%);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     position: fixed;
     left: 0;
     top: 0;
     padding: 30px;
     height: 100%;
-    border-right: 1px solid var(--bg-black-50);
+    border-right: 1px solid rgba(255, 255, 255, 0.06);
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 10;
     transition: all 0.3s ease;
+    box-shadow: 8px 0 32px rgba(0, 0, 0, 0.4);
 }
 .aside .logo
 {
@@ -189,17 +192,20 @@ ul
 }
 .aside .logo a
 {
-    color: var(--text-black-900);
+    color: #ffffff;
     font-weight: 700;
     padding: 15px 20px;
     font-size: 30px;
     letter-spacing: 5px;
     position: relative;
+    text-shadow: 0 0 20px rgba(236, 24, 57, 0.3);
 }
 .aside .logo span
 {
     font-family: 'Clicker Script' , cursive;
     font-size: 40px;
+    color: var(--skin-color);
+    filter: drop-shadow(0 0 8px rgba(236, 24, 57, 0.5));
 }
 .aside .logo a::before
 {
@@ -207,26 +213,29 @@ ul
     position: absolute;
     width: 20px;
     height: 20px;
-    border-bottom: 5px solid var(--skin-color);
-    border-left: 5px solid var(--skin-color);
+    border-bottom: 3px solid var(--skin-color);
+    border-left: 3px solid var(--skin-color);
     bottom: 0;
     left: 0;
+    opacity: 0.8;
 }
 .aside .nav-toggler
 {
     height: 40px;
     width: 45px;
-   border: 1px solid var(--bg-black-50);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     cursor: pointer;
     position: fixed;
     left: 300px;
     top: 20px;
-    border-radius: 5px ;
-    background: var(--bg-black-100);
+    border-radius: 8px;
+    background: rgba(48, 16, 74, 0.7);
+    backdrop-filter: blur(10px);
     display: none;
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
 .aside .nav-toggler span
 {
@@ -272,10 +281,11 @@ ul
     position: absolute;
     width: 20px;
     height: 20px;
-    border-top: 5px solid var(--skin-color);
-    border-right: 5px solid var(--skin-color);
+    border-top: 3px solid var(--skin-color);
+    border-right: 3px solid var(--skin-color);
     top: 0;
     right: 0;
+    opacity: 0.8;
 }
 .aside .nav-toggler.open span::after
 {
@@ -285,30 +295,53 @@ ul
 .aside .nav
 {
     margin-top: 50px;
-    
+    width: 100%;
 }
 .aside .nav li
 {
-    margin-bottom: 20px;
+    margin-bottom: 8px;
     display: block;
-    border-bottom: 1px solid var(--bg-black-50);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+.aside .nav li:last-child
+{
+    border-bottom: none;
 }
 .aside .nav li a
 {
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 600;
-    display: block;
-    border-bottom: 1px solid var(--b-black-50);
-    color:var(--text-black-900);
-    padding: 5px 15px;
+    display: flex;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.6);
+    padding: 12px 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    letter-spacing: 0.3px;
+}
+.aside .nav li a:hover
+{
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.05);
+    padding-left: 22px;
 }
 .aside .nav li a.active
 {
     color: var(--skin-color);
+    background: rgba(236, 24, 57, 0.1);
+    border-left: 3px solid var(--skin-color);
+    box-shadow: inset 0 0 15px rgba(236, 24, 57, 0.05);
 }
 .aside .nav li a i
 {
-    margin-right: 15px;
+    margin-right: 12px;
+    font-size: 14px;
+    width: 18px;
+    text-align: center;
+    opacity: 0.8;
 }
 /* home*/
 .home
