@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tajawal:wght@300;400;500;700;800;900&display=swap');
 :root
 {
     --bg-black-900:#f2f2fc;
@@ -19,7 +19,7 @@ body
 {   
     line-height: 1.5;
     font-size: 16px;
-    font-family: 'poppins' sans-serif;
+    font-family: 'Tajawal', 'Poppins', sans-serif;
     direction: rtl;
     text-align: right;
 }
@@ -950,30 +950,222 @@ h3.my-profrssiion
 /* change icon start */
 
 .container-sel i {
-
     list-style-type: none;
     padding: 0;
     display: flex;
-
 }
-
-.container-sel-1 i a {
-
-    margin-right: 30px;
-}
-
-container-sel-1 i a {
-
-    font-size: 50px;
-    color: var(--skin-color);
-    transition: color 0.3s ease;
-}
-
-.container-sel-1 i a i {
-    color: var(--skin-color);
-    font-size: 30px;
-
-}
-
 
 /* change icon end */
+
+/* ==========================================================================
+   Modern & Luxury Redesign (Inspired by Promo Posters)
+   ========================================================================== */
+
+/* Background Glowing Blobs */
+.background-blobs {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* float behind sections */
+    pointer-events: none;
+    overflow: hidden;
+}
+.background-blobs .blob-1 {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: var(--skin-color);
+    filter: blur(160px);
+    opacity: 0.15;
+    border-radius: 50%;
+    top: -100px;
+    right: -100px;
+    animation: pulseBlob 8s infinite alternate ease-in-out;
+}
+.background-blobs .blob-2 {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: #00ccff;
+    filter: blur(140px);
+    opacity: 0.12;
+    border-radius: 50%;
+    bottom: -50px;
+    left: -50px;
+    animation: pulseBlob 12s infinite alternate-reverse ease-in-out;
+}
+
+@keyframes pulseBlob {
+    0% {
+        transform: scale(1) translate(0, 0);
+        opacity: 0.12;
+    }
+    100% {
+        transform: scale(1.15) translate(30px, -20px);
+        opacity: 0.18;
+    }
+}
+
+/* Default Dark Theme Background Redesign */
+body.dark .section {
+    background: radial-gradient(circle at 70% 30%, #30104a 0%, #151515 70%);
+}
+
+/* Glassmorphism Navigation Aside */
+body.dark .aside {
+    background: rgba(21, 21, 21, 0.75);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-left: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Profile Picture Design matching Promo Poster */
+.home .home-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home .home-img .photo-container {
+    z-index: 2;
+    width: 380px;
+    height: 380px;
+    border-radius: 50%;
+    padding: 8px;
+    background: linear-gradient(45deg, var(--skin-color), #00ccff);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    position: relative;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.home .home-img .photo-container:hover {
+    transform: scale(1.03) translateY(-10px);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.65), 0 0 25px rgba(0, 204, 255, 0.25);
+}
+.home .home-img .photo-container .photo {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #151515;
+    background: #151515;
+    transition: all 0.5s ease;
+}
+.home .home-img .photo-container .tag {
+    position: absolute;
+    bottom: 25px;
+    right: -15px;
+    background: #fff;
+    color: #000;
+    padding: 8px 22px;
+    border-radius: 30px;
+    font-weight: 800;
+    font-size: 16px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    transform: rotate(-6deg);
+    transition: all 0.3s ease;
+}
+.home .home-img .photo-container:hover .tag {
+    transform: rotate(0deg) scale(1.08);
+    background: var(--skin-color);
+    color: #fff;
+    box-shadow: 0 10px 25px rgba(236, 24, 57, 0.4);
+}
+
+/* Premium Typography adjustments */
+.home .home-info .name {
+    background: linear-gradient(90deg, var(--skin-color) 0%, #00ccff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 38px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    display: inline-block;
+}
+body.dark h3.hello, 
+body.dark h3.my-profrssiion {
+    color: #fff;
+}
+body.dark .home-info p {
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.8;
+}
+
+/* Glassmorphism Cards */
+body.dark .service .service-item .service-itme-inner,
+body.dark .portfolio .portfolio-item-inner,
+body.dark .about .timeline-box .timeline,
+body.dark .gallery .box {
+    background: rgba(34, 34, 34, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+body.dark .service .service-item .service-itme-inner:hover,
+body.dark .portfolio .portfolio-item-inner:hover,
+body.dark .gallery .box:hover {
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45), 0 0 15px rgba(255, 255, 255, 0.05);
+}
+body.dark .portfolio .portfolio-item-inner {
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 6px;
+}
+body.dark .about .timeline-box .timeline::before {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Premium Social Buttons */
+.container-sel .row {
+    display: flex;
+    gap: 15px;
+    margin: 20px 0;
+    flex-wrap: nowrap;
+}
+.container-sel .container-sel.padd-15 {
+    padding: 0;
+}
+.container-sel-1 a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.04) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    color: #fff !important;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+    text-decoration: none;
+}
+.container-sel-1 a i {
+    font-size: 20px !important;
+    color: #fff !important;
+    transition: all 0.3s ease !important;
+}
+.container-sel-1 a:hover {
+    background: var(--skin-color) !important;
+    border-color: var(--skin-color) !important;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35), 0 0 15px var(--skin-color);
+}
+.container-sel-1 a:hover i {
+    transform: scale(1.1);
+    color: #fff !important;
+}
+
+/* Contact Form input redesign */
+body.dark .contact .contact-form .form-control {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: #fff;
+    transition: all 0.3s ease;
+}
+body.dark .contact .contact-form .form-control:focus {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: var(--skin-color);
+    box-shadow: 0 0 15px rgba(236, 24, 57, 0.2);
+}
