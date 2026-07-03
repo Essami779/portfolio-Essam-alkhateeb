@@ -596,7 +596,11 @@ h3.my-profrssiion
     margin-bottom: 12px;
     color: var(--text-black-700);
 }
-.about .about-content .timeline .timeline-date .fa
+.about .about-content .timeline .timeline-date .fa,
+.about .about-content .timeline .timeline-date .fas,
+.about .about-content .timeline .timeline-date .fab,
+.about .about-content .timeline .timeline-date .far,
+.about .about-content .timeline .timeline-date .fal
 {
     margin-right: 5px;
 }
@@ -649,7 +653,11 @@ h3.my-profrssiion
     text-align: center;
     transition: all 0.3s ease;
 }
-.service .service-item .service-itme-inner .icon .fa
+.service .service-item .service-itme-inner .icon .fa,
+.service .service-item .service-itme-inner .icon .fas,
+.service .service-item .service-itme-inner .icon .fab,
+.service .service-item .service-itme-inner .icon .far,
+.service .service-item .service-itme-inner .icon .fal
 {
     font-size: 40px;
     line-height: 60px;
@@ -660,7 +668,11 @@ h3.my-profrssiion
 {
     background: var(--skin-color);
 }
-.service .service-item .service-itme-inner:hover .icon .fa
+.service .service-item .service-itme-inner:hover .icon .fa,
+.service .service-item .service-itme-inner:hover .icon .fas,
+.service .service-item .service-itme-inner:hover .icon .fab,
+.service .service-item .service-itme-inner:hover .icon .far,
+.service .service-item .service-itme-inner:hover .icon .fal
 {
     font-size: 25px;
     color: #ffffff;
@@ -833,7 +845,11 @@ h3.my-profrssiion
 {
     display: inline-block;
 }
-.contact .contact-info-item .icon .fa
+.contact .contact-info-item .icon .fa,
+.contact .contact-info-item .icon .fas,
+.contact .contact-info-item .icon .fab,
+.contact .contact-info-item .icon .far,
+.contact .contact-info-item .icon .fal
 {
     font-size: 25px;
     color: var(--skin-color);
