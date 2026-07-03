@@ -27,6 +27,9 @@
     position: absolute;
     height: 40px;
     width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     font-size: 20px;
     background: var(--bg-black-100);
@@ -37,6 +40,12 @@
     cursor: pointer;
     transition: all 0.3s ease;
     border-radius: 50%;
+}
+
+.style-switcher .s-icon img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
 }
 
 .style-switcher .s-icon i {
