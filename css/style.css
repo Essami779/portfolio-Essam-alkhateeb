@@ -1195,3 +1195,64 @@ body.dark .contact .contact-form .form-control:focus {
     border-color: var(--skin-color);
     box-shadow: 0 0 15px rgba(236, 24, 57, 0.2);
 }
+
+/* ====  Portfolio Details Button ==== */
+.portfolio-item-inner {
+    position: relative;
+    overflow: hidden;
+}
+.portfolio-img {
+    position: relative;
+    overflow: hidden;
+}
+.portfolio-img img {
+    transition: transform 0.4s ease;
+    width: 100%;
+    display: block;
+}
+.portfolio-item-inner:hover .portfolio-img img {
+    transform: scale(1.05);
+}
+.portfolio-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.3) 50%, transparent 100%);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 18px;
+    opacity: 0;
+    transition: opacity 0.35s ease;
+}
+.portfolio-item-inner:hover .portfolio-overlay {
+    opacity: 1;
+}
+.portfolio-details-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--skin-color);
+    color: #fff !important;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 9px 22px;
+    border-radius: 30px;
+    text-decoration: none !important;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    transform: translateY(10px);
+    transition: transform 0.35s ease, box-shadow 0.3s ease, background 0.3s ease;
+    border: 1.5px solid rgba(255,255,255,0.2);
+}
+.portfolio-item-inner:hover .portfolio-details-btn {
+    transform: translateY(0);
+}
+.portfolio-details-btn:hover {
+    background: #fff !important;
+    color: var(--skin-color) !important;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+}
+.portfolio-details-btn i {
+    font-size: 13px;
+}
