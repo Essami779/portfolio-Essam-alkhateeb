@@ -3,17 +3,29 @@
  * Refactored for robustness and cross-page compatibility
  */
 
-document.addEventListener("DOMContentLoaded", () => {
+// Wait for full page load (including external CDN scripts)
+window.addEventListener("load", function() {
     /* =================================== typing animation ================================= */
-    const typingElement = document.querySelector(".typing");
-    if (typingElement && typeof Typed !== 'undefined') {
-        new Typed(".typing", {
-            strings: ["مصمم مواقع", "مصمم تطبيقات", "مطور فلاتر", "مطور مواقع", "عمل حر"],
-            typeSpeed: 100,
-            backSpeed: 60,
-            loop: true
-        });
+    let typedRetries = 0;
+    function initTyped() {
+        const typingElement = document.querySelector(".typing");
+        if (typingElement && typeof Typed !== 'undefined') {
+            new Typed(".typing", {
+                strings: ["مصمم مواقع", "مصمم تطبيقات", "مطور فلاتر", "مطور مواقع", "عمل حر"],
+                typeSpeed: 100,
+                backSpeed: 60,
+                loop: true
+            });
+        } else if (typedRetries < 10) {
+            // Retry up to 10 times (every 200ms = 2 seconds total)
+            typedRetries++;
+            setTimeout(initTyped, 200);
+        }
     }
+    initTyped();
+});
+
+document.addEventListener("DOMContentLoaded", () => {
 
     /* =================================== Aside / Navigation ================================= */
     const nav = document.querySelector(".nav");
