@@ -166,7 +166,7 @@ ul
 .aside
 {
     width: 270px;
-    background: linear-gradient(180deg, rgba(48, 16, 74, 0.6) 0%, rgba(21, 21, 21, 0.85) 100%);
+    background: linear-gradient(180deg, rgba(48, 16, 74, 0.75) 0%, rgba(21, 21, 21, 0.85) 100%);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     position: fixed;
@@ -1087,7 +1087,7 @@ body.dark .section {
 
 /* Glassmorphism Navigation Aside */
 body.dark .aside {
-    background: rgba(21, 21, 21, 0.75);
+    background: linear-gradient(180deg, rgba(48, 16, 74, 0.75) 0%, rgba(21, 21, 21, 0.85) 100%);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border-left: 1px solid rgba(255, 255, 255, 0.05);
@@ -1218,13 +1218,20 @@ body.dark .about .timeline-box .timeline::before {
     color: #fff !important;
     transition: all 0.3s ease !important;
 }
+.container-sel-1 a img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+    transition: all 0.3s ease !important;
+}
 .container-sel-1 a:hover {
     background: var(--skin-color) !important;
     border-color: var(--skin-color) !important;
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35), 0 0 15px var(--skin-color);
 }
-.container-sel-1 a:hover i {
+.container-sel-1 a:hover i,
+.container-sel-1 a:hover img {
     transform: scale(1.1);
     color: #fff !important;
 }
