@@ -118,39 +118,52 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-// EmailJS Function (Global for onclick)
-function sendMail() {
+// EmailJS Function (Global for the contact form)
+function sendMail(event) {
+    if (event) event.preventDefault();
+
+    const form = document.getElementById("contact-form");
     const name = document.getElementById("name");
     const email = document.getElementById("email");
-    const subject = document.getElementById("seubject");
+    const subject = document.getElementById("subject");
     const message = document.getElementById("message");
+    const status = document.getElementById("form-status");
+    const submitButton = form ? form.querySelector('button[type="submit"]') : null;
+    const isArabic = document.documentElement.lang === "ar";
 
-    if (!name || !email || !subject || !message) return;
+    if (!form || !name || !email || !subject || !message) return;
+    if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+    }
+    if (typeof emailjs === "undefined") {
+        if (status) status.textContent = isArabic ? "تعذر تحميل خدمة الإرسال. حاول مرة أخرى لاحقًا." : "The email service could not be loaded. Please try again later.";
+        return;
+    }
 
     const params = {
-        name: name.value,
-        email: email.value,
-        seubject: subject.value,
-        message: message.value,
+        name: name.value.trim(),
+        email: email.value.trim(),
+        subject: subject.value.trim(),
+        seubject: subject.value.trim(),
+        message: message.value.trim()
     };
-
     const serviceID = "service_3vtz3ss";
     const templateID = "template_awje3wb";
 
-    if (typeof emailjs !== 'undefined') {
-        emailjs.send(serviceID, templateID, params)
-            .then(res => {
-                name.value = "";
-                email.value = "";
-                subject.value = "";
-                message.value = "";
-                alert("Your message sent successfully!!");
-            })
-            .catch(err => {
-                console.error("EmailJS Error:", err);
-                alert("Failed to send message. Please check console.");
-            });
-    } else {
-        alert("EmailJS library not loaded!");
-    }
+    if (submitButton) submitButton.disabled = true;
+    if (status) status.textContent = isArabic ? "جارٍ إرسال رسالتك..." : "Sending your message...";
+
+    emailjs.send(serviceID, templateID, params)
+        .then(() => {
+            form.reset();
+            if (status) status.textContent = isArabic ? "تم إرسال رسالتك بنجاح. شكرًا لتواصلك." : "Your message was sent successfully. Thank you for reaching out.";
+        })
+        .catch((error) => {
+            console.error("EmailJS Error:", error);
+            if (status) status.textContent = isArabic ? "تعذر إرسال الرسالة. يرجى المحاولة لاحقًا." : "Your message could not be sent. Please try again later.";
+        })
+        .finally(() => {
+            if (submitButton) submitButton.disabled = false;
+        });
 }

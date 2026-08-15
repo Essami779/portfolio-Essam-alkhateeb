@@ -42,7 +42,7 @@
                 <li><a href="#home" class="active"><i class="fas fa-home"></i> Home</a></li>
                 <li><a href="#about"><i class="fas fa-user"></i>About</a></li>
                 <li><a href="#service"><i class="fas fa-list"></i>Services</a></li>
-                <li><a href="#portfolio"><i class="fas fa-briefcase"></i>Protfolio</a></li>
+                <li><a href="#portfolio"><i class="fas fa-briefcase"></i>Portfolio</a></li>
                 <li><a href="#contact"><i class="fas fa-comments"></i>Contact</a></li>
             </ul>
         </div>
@@ -72,7 +72,7 @@
                                 <!--==== Contact info item Start ====-->
                                 <div class="container-sel padd-15">
                                     <div class="container-sel-1">
-                                        <a href="tel:+967 779121779" title="WhatsApp"><img src="icon/whatsapp-logo.gif" alt="WhatsApp"></a>
+                                        <a href="https://wa.me/967779121779" target="_blank" rel="noopener noreferrer" title="WhatsApp"><img src="icon/whatsapp-logo.gif" alt="WhatsApp"></a>
                                     </div>
                                 </div>
                                 <!--==== Contact info item End ====-->
@@ -80,7 +80,7 @@
                                 <!--==== Contact info item Start ====-->
                                 <div class="container-sel padd-15">
                                     <div class="container-sel-1">
-                                        <a href="https://www.facebook.com/Essami779" class="active" title="Facebook"><img src="icon/facebook-logo.png" alt="Facebook"></a>
+                                        <a href="https://www.facebook.com/Essami779" class="active" target="_blank" rel="noopener noreferrer" title="Facebook"><img src="icon/facebook-logo.png" alt="Facebook"></a>
                                     </div>
                                 </div>
                                 <!--==== Contact info item End ====-->
@@ -88,7 +88,7 @@
                                 <!--==== Contact info item Start ====-->
                                 <div class="container-sel padd-15">
                                     <div class="container-sel-1">
-                                        <a href="https://www.instagram.com/essami779" title="Instagram"><img src="icon/instagram-logo.gif" alt="Instagram"></a>
+                                        <a href="https://www.instagram.com/essami779" target="_blank" rel="noopener noreferrer" title="Instagram"><img src="icon/instagram-logo.gif" alt="Instagram"></a>
                                     </div>
                                 </div>
                                 <!--==== Contact info item End ====-->
@@ -96,7 +96,7 @@
                                 <!--==== Contact info item Start ====-->
                                 <div class="container-sel padd-15">
                                     <div class="container-sel-1">
-                                        <a href="https://www.linkedin.com/in/esaam-alkhateeb-a7b8b61aa/" title="LinkedIn"><img src="icon/linkedin-logo.gif" alt="LinkedIn"></a>
+                                        <a href="https://www.linkedin.com/in/esaam-alkhateeb-a7b8b61aa/" target="_blank" rel="noopener noreferrer" title="LinkedIn"><img src="icon/linkedin-logo.gif" alt="LinkedIn"></a>
                                     </div>
                                 </div>
                                 <!--==== Contact info item End ====-->
@@ -496,7 +496,7 @@
                     <div class="portfolio-item padd-15">
                         <div class="portfolio-item-inner shadow-dark">
                             <div class="portfolio-img">
-                                <img src="images/protfolio/Freelance_Al-Yemen.png" alt="">
+                                <img src="images/protfolio/Freelance_Al-Yemen.png" alt="Project preview">
                             </div>
                         </div>
                     </div>
@@ -505,7 +505,7 @@
                     <div class="portfolio-item padd-15">
                         <div class="portfolio-item-inner shadow-dark">
                             <div class="portfolio-img">
-                                <img src="images/protfolio/Work_Now_Online .png" alt="">
+                                <img src="images/protfolio/Work_Now_Online .png" alt="Project preview">
                             </div>
                         </div>
                     </div>
@@ -514,7 +514,7 @@
                     <div class="portfolio-item padd-15">
                         <div class="portfolio-item-inner shadow-dark">
                             <div class="portfolio-img">
-                                <img src="images/protfolio/AstroDev.jpg" alt="">
+                                <img src="images/protfolio/AstroDev.jpg" alt="Project preview">
                             </div>
                         </div>
                     </div>                </div>
@@ -678,42 +678,43 @@
                     <!--==== Contact info item End ====-->
                 </div>
                 <h3 class="contact-title padd-15">SEND ME AN EMAIL </h3>
-                <h4 class="contact-sub-title padd-15">I'M VERY RESPOSIVE TO MESAGES</h4>
+                <h4 class="contact-sub-title padd-15">I'M VERY RESPONSIVE TO MESSAGES</h4>
                 <!--====  Contact Form  =====-->
                 <div class="row">
-                    <div class="contact-form padd-15">
+                    <form class="contact-form padd-15" id="contact-form" onsubmit="sendMail(event)">
                         <div class="row">
                             <div class="form-item col-6 padd-15">
                                 <div class="from-group">
-                                    <input type="text" class="form-control"id="name" placeholder="Name">
+                                    <input type="text" class="form-control" id="name" name="name" autocomplete="name" required aria-label="Name" placeholder="Name">
                                 </div>
                             </div>
                             <div class="form-item col-6 padd-15">
                                 <div class="from-group">
-                                    <input type="email" class="form-control" id="email" placeholder="Email">
+                                    <input type="email" class="form-control" id="email" name="email" autocomplete="email" required aria-label="Email" placeholder="Email">
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="form-item col-12 padd-15">
                                 <div class="from-group">
-                                    <input type="text" class="form-control" id="seubject" placeholder="Seubject">
+                                    <input type="text" class="form-control" id="subject" name="subject" required aria-label="Subject" placeholder="Subject">
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="form-item col-12 padd-15">
                                 <div class="from-group">
-                                    <textarea name="" class="form-control" id="message" placeholder="Message"></textarea>
+                                    <textarea class="form-control" id="message" name="message" required aria-label="Message" placeholder="Message"></textarea>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="form-item col-12 padd-15">
-                                <button onclick="sendMail()" class="btn">Send Message</button>
+                                <button type="submit" class="btn">Send Message</button>
+                                <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
                             </div>
                         </div>
-                    </div>
+                    </form>
                 </div>
             </div>
         </section>

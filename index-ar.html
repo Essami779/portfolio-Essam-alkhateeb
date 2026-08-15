@@ -72,7 +72,7 @@
                                 <!--==== Contact info item Start ====-->
                                 <div class="container-sel padd-15">
                                     <div class="container-sel-1">
-                                        <a href="tel:+967 779121779" title="واتساب"><img src="icon/whatsapp-logo.gif" alt="واتساب"></a>
+                                        <a href="https://wa.me/967779121779" target="_blank" rel="noopener noreferrer" title="واتساب"><img src="icon/whatsapp-logo.gif" alt="واتساب"></a>
                                     </div>
                                 </div>
                                 <!--==== Contact info item End ====-->
@@ -80,7 +80,7 @@
                                 <!--==== Contact info item Start ====-->
                                 <div class="container-sel padd-15">
                                     <div class="container-sel-1">
-                                        <a href="https://www.facebook.com/Essami779" class="active" title="فيسبوك"><img src="icon/facebook-logo.png" alt="فيسبوك"></a>
+                                        <a href="https://www.facebook.com/Essami779" class="active" target="_blank" rel="noopener noreferrer" title="فيسبوك"><img src="icon/facebook-logo.png" alt="فيسبوك"></a>
                                     </div>
                                 </div>
                                 <!--==== Contact info item End ====-->
@@ -88,7 +88,7 @@
                                 <!--==== Contact info item Start ====-->
                                 <div class="container-sel padd-15">
                                     <div class="container-sel-1">
-                                        <a href="https://www.instagram.com/essami779" title="انستجرام"><img src="icon/instagram-logo.gif" alt="انستجرام"></a>
+                                        <a href="https://www.instagram.com/essami779" target="_blank" rel="noopener noreferrer" title="انستجرام"><img src="icon/instagram-logo.gif" alt="انستجرام"></a>
                                     </div>
                                 </div>
                                 <!--==== Contact info item End ====-->
@@ -96,7 +96,7 @@
                                 <!--==== Contact info item Start ====-->
                                 <div class="container-sel padd-15">
                                     <div class="container-sel-1">
-                                        <a href="https://www.linkedin.com/in/esaam-alkhateeb-a7b8b61aa/" title="لينكد إن"><img src="icon/linkedin-logo.gif" alt="لينكد إن"></a>
+                                        <a href="https://www.linkedin.com/in/esaam-alkhateeb-a7b8b61aa/" target="_blank" rel="noopener noreferrer" title="لينكد إن"><img src="icon/linkedin-logo.gif" alt="لينكد إن"></a>
                                     </div>
                                 </div>
                                 <!--==== Contact info item End ====-->
@@ -483,7 +483,7 @@
                     <div class="portfolio-item padd-15">
                         <div class="portfolio-item-inner shadow-dark">
                             <div class="portfolio-img">
-                                <img src="images/protfolio/Freelance_Al-Yemen.png" alt="">
+                                <img src="images/protfolio/Freelance_Al-Yemen.png" alt="Project preview">
                             </div>
                         </div>
                     </div>
@@ -492,7 +492,7 @@
                     <div class="portfolio-item padd-15">
                         <div class="portfolio-item-inner shadow-dark">
                             <div class="portfolio-img">
-                                <img src="images/protfolio/Work_Now_Online .png" alt="">
+                                <img src="images/protfolio/Work_Now_Online .png" alt="Project preview">
                             </div>
                         </div>
                     </div>
@@ -501,7 +501,7 @@
                     <div class="portfolio-item padd-15">
                         <div class="portfolio-item-inner shadow-dark">
                             <div class="portfolio-img">
-                                <img src="images/protfolio/AstroDev.jpg" alt="">
+                                <img src="images/protfolio/AstroDev.jpg" alt="Project preview">
                             </div>
                         </div>
                     </div>                </div>
@@ -668,39 +668,40 @@
                 <h4 class="contact-sub-title padd-15">أنا سريع جدًا في الرد على الرسائل</h4>
                 <!--====  Contact Form  =====-->
                 <div class="row">
-                    <div class="contact-form padd-15">
+                    <form class="contact-form padd-15" id="contact-form" onsubmit="sendMail(event)">
                         <div class="row">
                             <div class="form-item col-6 padd-15">
                                 <div class="from-group">
-                                    <input type="text" class="form-control"id="name" placeholder="ألاسم">
+                                    <input type="text" class="form-control" id="name" name="name" autocomplete="name" required aria-label="Name" placeholder="ألاسم">
                                 </div>
                             </div>
                             <div class="form-item col-6 padd-15">
                                 <div class="from-group">
-                                    <input type="email" class="form-control" id="email" placeholder="ألايميل">
+                                    <input type="email" class="form-control" id="email" name="email" autocomplete="email" required aria-label="Email" placeholder="ألايميل">
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="form-item col-12 padd-15">
                                 <div class="from-group">
-                                    <input type="text" class="form-control" id="seubject" placeholder="العنوان">
+                                    <input type="text" class="form-control" id="subject" name="subject" required aria-label="Subject" placeholder="العنوان">
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="form-item col-12 padd-15">
                                 <div class="from-group">
-                                    <textarea name="" class="form-control" id="message" placeholder="الرسالة"></textarea>
+                                    <textarea class="form-control" id="message" name="message" required aria-label="Message" placeholder="الرسالة"></textarea>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="form-item col-12 padd-15">
-                                <button onclick="sendMail()" class="btn">ارسال الرسالة</button>
+                                <button type="submit" class="btn">ارسال الرسالة</button>
+                                <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
                             </div>
                         </div>
-                    </div>
+                    </form>
                 </div>
             </div>
         </section>
